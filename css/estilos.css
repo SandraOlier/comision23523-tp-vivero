@@ -1,0 +1,105 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: lightgreen:"Roboto", sans serif
+}
+
+ body{
+    background-color: lightcyan;
+ }
+
+h1 {
+    color: forestgreen;
+    border-color: darkseagreen;
+    border-radius: 1opx;
+}
+
+h2 {
+    border: dotted greenyellow;
+    color: violet;
+    background-color: lavender;
+}
+
+}
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "encabezado encabezado encabezado"
+                         "contenido contenido info"
+                         "atencion asistencia info"
+                         "envios envios envios";
+}
+.contenedor>div,
+.contenedor .encabezado,
+.contenedor .contenido,
+.contenedor .atencion
+.contenedor.asistencia
+.contenedor .info,
+.contenedor .envios{
+    padding: 20px;
+    border-radius: 4px;
+}
+.contenedor.encabezado{
+    background-color:lavenderblush ;
+    color: lightgreen;
+    grid-area: encabezado;
+}
+
+.contenedor.contenido{
+    background-color: lightgrey;
+    grid-area: contenido;
+}
+
+.contenedor.info{
+    background-color: indianred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area:info ;
+}
+.contenedor.atencion
+.contenedor.asistencia{
+    background-color: aquamarine
+    color:blueviolet
+height: 100px
+display flex;
+align-items: center;
+justify-content: center;
+}
+
+,contenrdor.contenedor.atencion{
+    grid-area:atencion ;
+}
+.contenedor.contenedor.asistencia{
+    grid-area:asistencia ;
+}
+
+,.contenedor.envios{
+    background-color: mediumseagreen;
+    color: lightseagreen;
+    grid-area: envios;
+}
+@media screen and(max-width:768px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+       " contenido contenido contenido"
+       "atencion atencion asistencia"
+       "envios envios envios";
+    }
+}
+
+@media screen and(max-widht: 450px){
+    .contenedor{
+        grid-template-areas: "encabezado encabezado encabezado"
+                              "contenido contenido contenido"
+                              " atencion atencion atencion " 
+                              "asistencia asistencia asistencia " 
+                              "info info info"
+                              " envios envios envios"}    
+}
+
